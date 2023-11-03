@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+ul{
+    list-style-type:none;
+}
+
+h1 {
+    font-size: 6em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-size: 6em;
+    color: #f8f0ff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}

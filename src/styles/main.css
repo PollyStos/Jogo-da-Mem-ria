@@ -1,0 +1,154 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #c061ff;
+    user-select: none;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(325deg, #03001e 0%, #7303c0 30%, #ec38bc 70%, #fdeff9 100%);
+    padding: 60px 30px;
+}
+
+.btnMenu {
+    padding: 10px 60px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btnMenu:focus {
+    color: #ec38bc;
+    background-color: #262809;
+}
+
+.transparent-button {
+    opacity: 0.5; 
+    pointer-events: none; 
+  }
+ 
+.campo {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border:1px solid #7303c0;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #404040b0;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
+}
+
+@media(max-width: 1500px) {
+    h1{
+        font-size: 5em;
+    }
+
+    .btnMenu{
+        font-size: 2.5em;
+    }
+
+    .game{
+        gap: 12px;
+    }
+}
+@media(max-width: 1200px) {
+    h1{
+        font-size: 4em;
+    }
+
+    .btnMenu{
+        font-size: 2em;
+    }
+
+    .game{
+        gap: 12px;
+    }
+}
+
+@media(max-width: 900px) {
+    h1{
+        font-size: 3em;
+    }
+    
+    .btnMenu{
+        font-size: 1.5em;
+    }
+
+    .game{
+        gap: 9px;
+    }
+}
+
+@media(max-width: 600px) {
+    h1{
+        font-size: 2em;
+    }
+    
+    .btnMenu{
+        font-size: 1em;
+    }
+
+    .game{
+        gap: 6px;
+    }
+}
+
+@media(max-width: 300px) {
+    .game{
+        gap: 3px;
+    }
+}
